@@ -27,6 +27,7 @@
       <module>cloud-config-client-3366</module>
     <module>cloud-stream-rabbitmq-provider8801</module>
     <module>cloud-stream-rabbitmq-consumer8802</module>
+    <module>cloudalibaba-provider-payment9001</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -46,6 +47,11 @@
   <!--子模块继承之后，提供作用：锁定版本+子module不用谢groupId和version-->
   <dependencyManagement>
     <dependencies>
+      <!--    SpringCloud alibaba nacos-->
+      <dependency>
+        <groupId>com.alibaba.cloud</groupId>
+        <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+      </dependency>
       <!--spring boot 2.2.2-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
